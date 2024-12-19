@@ -52,7 +52,6 @@ class AnimatedModuleIdlingResource(private val reactContext: ReactContext) : Det
         callback?.onTransitionToIdle()
     }
 
-
     override fun registerIdleTransitionCallback(callback: ResourceCallback) {
         this.callback = callback
 
@@ -67,5 +66,3 @@ class AnimatedModuleIdlingResource(private val reactContext: ReactContext) : Det
         private const val LOG_TAG = "Detox"
     }
 }
-
-
