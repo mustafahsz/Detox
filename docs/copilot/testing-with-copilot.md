@@ -42,13 +42,14 @@ If you have implemented a `PromptHandler` for a specific LLM or service, conside
 ### Example of a `PromptHandler` for OpenAI's GPT-4
 
 ```javascript
-const { Configuration, OpenAIApi } = require('openai');
+import { OpenAI } from 'openai';
+
 const path = require('path');
 
 class OpenAIPromptHandler {
   constructor(apiKey) {
-    const configuration = new Configuration({ apiKey });
-    this.openai = new OpenAIApi(configuration);
+    const configuration = new OpenAI({ apiKey });
+    this.openai = new OpenAI(configuration);
   }
 
   async runPrompt(prompt, imagePath) {
